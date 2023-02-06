@@ -1,0 +1,19 @@
+{
+	"pages": [{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path": "pages/pages2/index"
+		}, {}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#888",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}
