@@ -1,7 +1,7 @@
 # uni-demo-default
 
 #### 介绍
-A basic uni-app demo written by the official document of uni-app.
+A basic uni-app demo written by the official document of uni-app. 
 
 #### 软件架构
 软件架构说明
