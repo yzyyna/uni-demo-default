@@ -9,6 +9,7 @@
 		<view><a @click="clickHandlerToPagesRedirect(2)">uni.redirectTo</a></view>
 		<view><a @click="clickHandlerToPagesReLaunch(2)">uni.reLaunch</a></view>
 		<view><a @click="clickHandlerSwitchTab(2)">uni.reLaunch</a></view>
+		<view><h2>test helo waiting for reply</h2></rich-text></view>
 	</view>
 </template>
 
