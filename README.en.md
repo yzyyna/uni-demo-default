@@ -5,7 +5,7 @@ A basic uni-app demo written by the official document of uni-app.
 
 #### Software Architecture
 Software architecture description
-
+     
 #### Installation
 
 1.  xxxx
