@@ -6,7 +6,7 @@ A basic uni-app demo written by the   official document of uni-app.
 #### 软件架构 
 软件架构说明               
               
-                            
+                                
 #### 安装教程                  
 1.  xxxx低的    
 2.  xxxx               
