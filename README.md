@@ -24,7 +24,7 @@ A basic uni-app demo written by the   official document of uni-app.
 2.  新建 Feat_xxx 分支  
 3.  提交代码
 4.  新建 Pull Request
-
+        
 
 #### 特技
 
