@@ -5,15 +5,25 @@
 			<text class="title" @click="clickHandler">{{ "getApp()" }}</text>
 		</view>
 		<common-component-a :id="'common-component-a'"></common-component-a>
-		<view><a @click="clickHandlerToPages(2)">uni.navigateTo</a></view>
-		<view><a @click="clickHandlerToPagesRedirect(2)">uni.redirectTo</a></view>
-		<view><a @click="clickHandlerToPagesReLaunch(2)">uni.reLaunch</a></view>
-		<view><a @click="clickHandlerSwitchTab(2)">uni.reLaunch</a></view>
-		<view><h2>test helo waiting for reply</h2></rich-text></view>
+		<test-easy-com></test-easy-com>
+		<view>!!!!!!!!!</view>
+		<view>
+			<h2>Main page test</h2></rich-text>
+		</view>
+
+		<button @click="testMyApi">调用原生API(手机端有效)</button>
 	</view>
 </template>
 
 <script>
+	// #ifdef APP
+	import {
+		myApi,
+		myApiSync,
+		MyApiOptions
+	} from "@/uni_modules/test-api";
+	// #endif
+
 	export default {
 		data() {
 			return {
@@ -25,30 +35,24 @@
 			clickHandler() {
 				console.log("app console.", getApp());
 			},
-			clickHandlerToPages(index) {
-				uni.navigateTo({
-					url: `/pages/pages${index}/index`,
-				});
-				console.log("navigate to pages" + index);
+			// #ifdef APP
+			testMyApi() {
+				// 调用异步方法示例
+				let options = {
+					paramA: false,
+					complete: (res) => {
+						console.log(res)
+					}
+				}
+
+				myApi(options);
 			},
-			clickHandlerToPagesRedirect(index) {
-				uni.redirectTo({
-					url: `/pages/pages${index}/index`,
-				});
-				console.log("redirect to pages" + index);
+			testMyApiSync() {
+				// 调用同步方法示例
+				console.log(myApiSync(true))
 			},
-			clickHandlerToPagesReLaunch(index) {
-				uni.reLaunch({
-					url: `/pages/pages${index}/index`
-				})
-				console.log('relaunch to pages' + index)
-			},
-			clickHandlerSwitchTab(index) {
-				uni.switchTab({
-					url: `/pages/pages${index}/index`
-				})
-				console.log('switch tab to pages' + index)
-			}
+			// #endif
+
 		},
 	};
 </script>
